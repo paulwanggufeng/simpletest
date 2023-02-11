@@ -27,9 +27,16 @@ fi
 echo "version is ${real_ver}"
 echo "opt is ${opt}"
 
+# go to script dir
+src_dir=$(dirname ~/test/simpletest/build.sh)
+pushd ${src_dir}
+
 build_dir=$real_ver
 mkdir -p ${build_dir}
-cmake -B ${build_dir} -S . ${opt}
-cmake --build ${build_dir}
+pushd ${build_dir}
+cmake -B . -S .. ${opt}
+make -j3
+pushd
 
+pushd
 

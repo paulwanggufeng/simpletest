@@ -1,7 +1,11 @@
 #include <iostream>
+#include "show_msg.h"
 
-int main(int argc, char* argv[])
+int main()
 {
-  std::cout << argc << "done" << std::endl;
-  return 0;
+	ShowMessage s;
+	s.output();
+	std::cout << "done." << std::endl;
+	return 0;
 }
+
