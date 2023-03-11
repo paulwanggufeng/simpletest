@@ -28,7 +28,8 @@ echo "version is ${real_ver}"
 echo "opt is ${opt}"
 
 # go to script dir
-src_dir=$(dirname ~/test/simpletest/build.sh)
+src_dir=$(dirname ${0})
+
 pushd ${src_dir}
 
 build_dir=$real_ver
